@@ -35,5 +35,12 @@
     "passport-local": "^1.0.0",
     "socket.io": "^4.8.1",
     "tus-js-client": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.6.0",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.10.7",
+    "@types/webidl-conversions": "^7.0.3",
+    "@types/whatwg-url": "^13.0.0"
   }
 }
