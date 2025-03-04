@@ -22,6 +22,7 @@
   "dependencies": {
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
+    "cookie": "^1.0.2",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
@@ -40,7 +41,7 @@
   "devDependencies": {
     "@types/cookie": "^0.6.0",
     "@types/cors": "^2.8.17",
-    "@types/node": "^22.10.7",
+    "@types/node": "^22.13.8",
     "@types/webidl-conversions": "^7.0.3",
     "@types/whatwg-url": "^13.0.0"
   }
