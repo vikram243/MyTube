@@ -16,7 +16,11 @@
     "@controllers": "./controllers",
     "@models": "./models",
     "@lib": "./lib",
-    "@routes": "./routes",
+    "@channel": "./routes/channel",
+    "@studio": "./routes/studio",
+    "@watch": "./routes/watch",
+    "@mytubecss": "./public/css/mytube",
+    "@studiocss": "./public/css/studio",
     "@root": "/"
   },
   "dependencies": {

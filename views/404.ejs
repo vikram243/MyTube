@@ -5,36 +5,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Not Found</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Arvo', serif;
+            background-color: #fff;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #0b0b0b;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            overflow: hidden;
         }
 
-        object {
-            margin-bottom: 5%;
+        .content {
+            text-align: center;
+        }
+
+        .four_zero_four_bg {
+            background-image: url(/images/404.gif);
+            height: 400px;
+            width: 100vw;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .four_zero_four_bg h1 {
+            font-size: 80px;
+            margin: 0 15px 0 0;
+        }
+
+        .contant_box_404 h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .contant_box_404 p {
+            color: #555;
+        }
+
+        .link_404 {
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #b51616;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 2vw;
+            text-decoration: none;
+        }
+
+        .link_404:hover {
+            background-color: #921212;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .contant_box_404 h3 {
+                font-size: 20px;
+            }
+
+            .link_404 {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contant_box_404 h3 {
+                font-size: 18px;
+            }
+
+            .link_404 {
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <object id="svg-object" type="image/svg+xml/webp" data="../public/images/404.webp"></object>
-    <script>
-        document.getElementById('svg-object').addEventListener('load', function () {
-            var svgDoc = this.contentDocument
-            svgDoc.querySelector('.the-box').addEventListener('click', () => window.location.href = '/')
-        });
-    </script>
+    <section class="page_404">
+        <div class="container">
+            <div class="content">
+                <div class="four_zero_four_bg">
+                    <h1>404</h1>
+                </div>
+                <div class="contant_box_404">
+                    <h3>Look like you're lost</h3>
+                    <p>The page you are looking for is not available!</p>
+                    <a href="/" class="link_404">Go Back To MyTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

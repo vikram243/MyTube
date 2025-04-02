@@ -27,7 +27,7 @@ const commentSchema = new Schema({
         ref: 'channel'
     }],
     dislikes: [{
-        type: Schema.types.ObjectId,
+        type: Schema.Types.ObjectId,
         default: 0,
         ref: 'channel'
     }],
@@ -37,5 +37,5 @@ const commentSchema = new Schema({
     }]
 });
 
-const Comment = mongoose.model('Comment', commentSchema);
-module.exports = Comment;
+const comment = mongoose.model('comment', commentSchema);
+module.exports = comment;

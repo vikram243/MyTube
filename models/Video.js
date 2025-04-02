@@ -1,7 +1,5 @@
-const { upload } = require('@lib/db')
-const mongoose = require('mongoose')
-const { Schema } = mongoose
-
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const videoSchema = new Schema({
     videoId: { type: String, required: true },
@@ -30,15 +28,15 @@ const videoSchema = new Schema({
     viewsEnabled: { type: Boolean, default: true },
     status: { type: String, trim: true, default: 'Uploading' },
     channel: { type: Schema.Types.ObjectId, ref: "Channel" }
+}, { timestamps: true });
 
-}, { timestamps: true })
 
-videoSchema.index({ title: 'text', description: 'text' })
-videoSchema.index({ channel: 1 })
-videoSchema.index({ length: 1 })
-videoSchema.index({ privacySettings: 1 })
-videoSchema.index({ uploadDate: 1 })
+videoSchema.index({ title: 'text', description: 'text' });
+videoSchema.index({ channel: 1 });
+videoSchema.index({ length: 1 });
+videoSchema.index({ privacySettings: 1 });
+videoSchema.index({ uploadDate: 1 });
 
-const Video = mongoose.model("Video", videoSchema)
+const video = mongoose.model("video", videoSchema);
 
-module.exports = Video
+module.exports = video;
