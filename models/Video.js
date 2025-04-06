@@ -37,6 +37,6 @@ videoSchema.index({ length: 1 });
 videoSchema.index({ privacySettings: 1 });
 videoSchema.index({ uploadDate: 1 });
 
-const video = mongoose.model("video", videoSchema);
+const video = mongoose.model("Video", videoSchema);
 
 module.exports = video;

@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
 // Search page
 router.get('/search', async (req, res) => {
-    res.render('devtube', {
+    res.render('mytube', {
         page: 'search',
         search: req.query.search
     })
@@ -39,11 +39,11 @@ router.get('/upload', checkChannel, isloggedIn, (req, res) => {
 //hashtag
 router.get("/hashtag/:name", async (req, res) => {
     const hashTag = await Tag.findOne({ name: req.params.name })
-    res.render("devtube", { page: 'hashTag', hashTag })
+    res.render("mytube", { page: 'hashTag', hashTag })
 });
 
 //shorts page 
-router.get('/shorts/:uid', async (req, res) => res.render('devtube', {
+router.get('/shorts/:uid', async (req, res) => res.render('mytube', {
     page: 'shorts',
     uid: req.params.uid
 }));

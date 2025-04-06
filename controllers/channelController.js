@@ -173,7 +173,7 @@ const getChannelAndSubscription = async (req, res, isHandle = true) => {
 
         if (!currentChannel) return res.redirect("/404");
 
-        res.render("devtube", { currentChannel, subscription, page: "channel" });
+        res.render("mytube", { currentChannel, subscription, page: "channel" });
     } catch (error) {
         console.error(`Error fetching channel and subscription:`, error);
         res.status(500).send("Failed to fetch channel and subscription.");

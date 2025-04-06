@@ -1,11 +1,11 @@
 // Import required modules
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const http = require('http');
 const passport = require('passport');
 const session = require('express-session');
 const socketio = require('socket.io');
-require('dotenv').config();
 require('module-alias/register');
 
 // Initialize the Express app and HTTP server

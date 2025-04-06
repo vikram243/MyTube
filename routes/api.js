@@ -3,7 +3,7 @@ const Video = require("@models/video")
 const { io } = require("../app")
 const express = require("express")
 const { subscribeChannel, unsubscribeChannel, notificationsChannel } = require("@controllers/channelController")
-const passport = require("passport")
+const passport = require("../config")
 const { default: axios } = require('axios')
 const crypto = require('crypto')
 const { createUniqueHandle } = require("@lib/utils")
@@ -179,7 +179,7 @@ router.get('/logout', (req, res) => {
             console.error("Error logging out:", err)
             return res.status(500).json({ error: "Error logging out" })
         }
-        res.status(200).json({ message: "Successfully logged out" })
+        res.redirect("/");
     })
 })
 

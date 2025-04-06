@@ -35,6 +35,6 @@ ChannelSchema.index(
 
 ChannelSchema.index({ name: "text", description: "text" });
 
-const channel = mongoose.model("channel", ChannelSchema);
+const channel = mongoose.model("Channel", ChannelSchema);
 
 module.exports = channel;

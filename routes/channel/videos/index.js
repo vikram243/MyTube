@@ -18,28 +18,28 @@ const storage = multer.diskStorage({
 })
 
 //get video api
-router.get('/get-video/:id', checkChannel, isloggedIn, getVideo)
+router.get('/get-video/:id', checkChannel, isloggedIn, getVideo);
 
 //check video edit api
-router.get('/can-edit/:id', checkChannel, isloggedIn, canEdit)
+router.get('/can-edit/:id', checkChannel, isloggedIn, canEdit);
 
 //upload video to bunny api
-router.post('/upload', isloggedIn, asyncHandler(createVideo))
+router.post('/upload', isloggedIn, asyncHandler(createVideo));
 
 //create video on bunny  api
-router.post('/create-upload', isloggedIn, asyncHandler(createUpload))
+router.post('/create-upload', isloggedIn, asyncHandler(createUpload));
 
 //create video on bunny  api
-router.post('/create-video', isloggedIn, multer({ storage: storage }).single('thumbnail'), asyncHandler(createVideo))
+router.post('/create-video', isloggedIn, multer({ storage: storage }).single('thumbnail'), asyncHandler(createVideo));
 
 //delete video 
-router.get('/delete/:videoId', isloggedIn, deleteVideo)
+router.get('/delete/:videoId', isloggedIn, deleteVideo);
 
 //send comments  
-router.post('/comment/:videoId', isloggedIn, createComment)
+router.post('/comment/:videoId', isloggedIn, createComment);
 
 //get comments  
-router.get('/:videoId/comments', getComments)
+router.get('/:videoId/comments', getComments);
 
 
 module.exports = router;

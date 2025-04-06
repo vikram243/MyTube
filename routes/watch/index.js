@@ -4,7 +4,7 @@ const express = require('express')
 const router = express.Router()
 
 //Watch Video Page
-router.get('/', async (req, res) => res.render('devtube', (await getPlayerLink(req, res))))
+router.get('/', async (req, res) => res.render('mytube', (await getPlayerLink(req, res))))
 
 router.get('/react/:videoId', isloggedIn, updateVideoLikesDislikes)
 
